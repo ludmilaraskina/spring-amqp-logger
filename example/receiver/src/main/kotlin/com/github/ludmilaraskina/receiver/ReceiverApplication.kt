@@ -1,11 +1,11 @@
-package com.github.ludmilaraskina.sender
+package com.github.ludmilaraskina.receiver
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class SenderApplication
+class ReceiverApplication
 
 fun main(args: Array<String>) {
-    runApplication<SenderApplication>(*args)
+    runApplication<ReceiverApplication>(*args)
 }

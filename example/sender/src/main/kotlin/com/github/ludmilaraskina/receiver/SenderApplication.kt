@@ -1,4 +1,4 @@
-package com.github.ludmilaraskina.sender
+package com.github.ludmilaraskina.receiver
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

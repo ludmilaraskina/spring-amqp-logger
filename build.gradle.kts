@@ -13,6 +13,7 @@ plugins {
 
 subprojects {
     apply(plugin = "org.jetbrains.kotlin.jvm")
+    apply(plugin = "org.jetbrains.kotlin.plugin.spring")
     apply(plugin = "io.gitlab.arturbosch.detekt")
     apply(plugin = "io.spring.dependency-management")
 
@@ -27,5 +28,9 @@ subprojects {
         imports {
             mavenBom("org.springframework.boot:spring-boot-dependencies:2.2.1.RELEASE")
         }
+    }
+
+    dependencies {
+        implementation(kotlin("stdlib-jdk8"))
     }
 }
