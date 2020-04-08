@@ -10,8 +10,8 @@ import org.springframework.context.annotation.Configuration
 import javax.annotation.PostConstruct
 
 @Configuration
-@ConditionalOnProperty("sup.amqp.log.enabled")
-@EnableConfigurationProperties(AmpqLoggingProperties::class)
+@ConditionalOnProperty("spring.amqp.log.enabled")
+@EnableConfigurationProperties(AmqpLoggingProperties::class)
 @ConditionalOnClass(RabbitTemplate::class)
 class AmqpLoggingConfig(private val rabbitTemplate: RabbitTemplate,
                         private val rabbitListenerContainerFactory: SimpleRabbitListenerContainerFactory) {
