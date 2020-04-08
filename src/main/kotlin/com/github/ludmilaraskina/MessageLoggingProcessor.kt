@@ -17,14 +17,10 @@ class MessageLoggingProcessor(private val prefix: String) : MessagePostProcessor
 
     @Throws(AmqpException::class)
     override fun postProcessMessage(message: Message): Message {
-        try {
-            val messageClass = Class.forName(message.messageProperties.headers[DEFAULT_CLASSID_FIELD_NAME].toString())
-            val messageObject = objectMapper.readValue(message.body, messageClass)
-            val logMessage = logObjectMapper.writeValueAsString(messageObject)
-            log.info { "$prefix: $logMessage" }
-        } catch (e: Exception) {
-            log.warn("Error in MessageLoggingProcessor. Ignoring: ${e.message}", e)
-        }
+        val messageClass = Class.forName(message.messageProperties.headers[DEFAULT_CLASSID_FIELD_NAME].toString())
+        val messageObject = objectMapper.readValue(message.body, messageClass)
+        val logMessage = logObjectMapper.writeValueAsString(messageObject)
+        log.info { "$prefix: $logMessage" }
         return message
     }
 }

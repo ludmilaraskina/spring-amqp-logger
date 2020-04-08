@@ -34,8 +34,6 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("io.github.microutils:kotlin-logging:1.7.8")
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.10.3")
-
-    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.1.1")
 }
 
 repositories {
@@ -44,5 +42,5 @@ repositories {
 }
 
 detekt {
-    ignoreFailures = true
+    ignoreFailures = false
 }
