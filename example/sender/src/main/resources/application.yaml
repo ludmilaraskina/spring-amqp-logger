@@ -1,0 +1,6 @@
+spring:
+  rabbitmq:
+    port: 5674
+  amqp:
+    log:
+      enabled: true
