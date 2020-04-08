@@ -17,13 +17,13 @@ Application publishes message
 To start example complete following steps
 
 1. docker-compose up
-2. Start application SenderApplication.kt in example/sender
-logs:
+2. Start application SenderApplication.kt in example/sender. 
+Logs produced:
 ```
 Message to publish: {"id":0,"description":"Example message","hidden":"***","masked":"****567890"}
 ```
-3. Start application ReceiverApplication.kt in example/receiver
-logs:
+3. Start application ReceiverApplication.kt in example/receiver.
+Logs produced:
 ```
 Received message: {"id":0,"description":"Example message","hidden":"***","masked":"****567890"}
 ```
